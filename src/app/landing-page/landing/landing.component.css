@@ -1,5 +1,5 @@
 .navbar {
-  background: #3fbce7;
+  background: linear-gradient(248deg, #4a51d3 -0.66%, #3fbce7 100%);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -15,4 +15,15 @@ button {
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.curved {
+  background: #4a51d3;
+  color: white;
+  text-align: center;
+}
+.curved svg {
+  display: block;
+}
+.curved.upper {
+  background: #fff;
 }
