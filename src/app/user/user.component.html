@@ -1,1 +1,55 @@
-<p>user works!</p>
+<p>user works again</p>
+
+<form>
+  <div class="form-group">
+    <label>SEARCH BY:</label>
+    <input
+      type="text"
+      name="search"
+      [(ngModel)]="username"
+      (keyup)="findUser()"
+    />
+  </div>
+</form>
+<div *ngIf="user" class="container">
+  <div class="card bg-light">
+    <div class="card-header">Username: {{ user.login }}</div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <img
+            [src]="user.avatar_url"
+            [title]="user.name"
+            [style.width.px]="imageWidth"
+            [style.height.px]="imageHeight"
+          />
+        </div>
+
+        <div class="col-sm-9">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Username: </strong> {{ user.login }}
+            </li>
+            <li class="list-group-item">
+              <strong>Name: </strong> {{ user.name }}
+            </li>
+            <li class="list-group-item">
+              <strong>Email: </strong> {{ user.email }}
+            </li>
+            <li class="list-group-item">
+              <strong>Location: </strong> {{ user.location }}
+            </li>
+            <li class="list-group-item">
+              <strong>Joined on: </strong> {{ user.created_at | date }}
+            </li>
+
+            <li class="list-group-item">
+              <strong>Repositories: </strong> {{ user.public_repos }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

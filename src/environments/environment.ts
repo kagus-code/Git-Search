@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://api.github.com/users/kagus-code?',
+  access_token: 'access_token=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',
+  
 };
 
 //ACCESSTOKEN :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
