@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.findUser();
+    this.userService.userRequest();
 
   }
 

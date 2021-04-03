@@ -12,6 +12,11 @@ export class UserRequestService {
     console.log ('service is now ready ')
   }
   userRequest(){
+
+
+
+
+    
     return this.http.get("https://api.github.com/users/" + this.username +'?'+environment.access_token);
     }
 
