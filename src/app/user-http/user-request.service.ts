@@ -13,21 +13,13 @@ export class UserRequestService {
   }
   userRequest(){
 
-
-
-
-    
     return this.http.get("https://api.github.com/users/" + this.username +'?'+environment.access_token);
     }
 
-    repoRequest(){
-      return this.http.get("https://api.github.com/users/" + this.username +'?' +environment.access_token );
+    userRepoRequest(){
+      return this.http.get("https://api.github.com/users/" + this.username + '/repos'+'?' +environment.access_token );
       }
-     // searchrepos() {
-       // return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
-         // headers: new HttpHeaders({Authorization: `token ${this.apikey}`})
-        //}))
-    //  }
+     
       UpdateUser(username:string) {
         this.username = username;
       }

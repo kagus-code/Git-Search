@@ -23,8 +23,9 @@ export class UserComponent implements OnInit {
       console.log(user);
       this.user = user;
     });
+    
 
-    this.userService.repoRequest().subscribe(repos => {
+    this.userService.userRepoRequest().subscribe(repos => {
       console.log(repos);
       this.userRepos = repos;
     })
@@ -34,8 +35,8 @@ export class UserComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
-    this.userService.userRequest();
+  ngOnInit() {
+    this.findUser()
 
   }
 
