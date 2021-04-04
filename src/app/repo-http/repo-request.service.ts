@@ -7,7 +7,6 @@ import {environment } from '../../environments/environment';
 export class RepoRequestService {
   username: string;
   repoName: string;
-  apikey:string='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';
   constructor(private http:HttpClient) {
     console.log('repo service started ')
    }
@@ -17,7 +16,7 @@ export class RepoRequestService {
     
     searchrepos() {
         return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
-          headers: new HttpHeaders({Authorization: `token ${this.apikey}`})
+          headers: new HttpHeaders({Authorization: 'token'+ environment.access_token})
         }))
       }
 
