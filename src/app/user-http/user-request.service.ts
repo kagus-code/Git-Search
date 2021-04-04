@@ -6,24 +6,23 @@ import{ User } from '../user-class/user'
   providedIn: 'root'
 })
 export class UserRequestService {
-  username: string;
-  repoName: string;
+ user: User
   constructor(private http:HttpClient) { 
-    console.log ('service is now ready ')
+    this.user= new User("","");
   }
   userRequest(){
 
-    return this.http.get("https://api.github.com/users/" + this.username +'?'+environment.access_token);
+    return this.http.get("https://api.github.com/users/" + this.user.username +'?'+environment.access_token);
     }
 
     userRepoRequest(){
-      return this.http.get("https://api.github.com/users/" + this.username + '/repos'+'?' +environment.access_token );
+      return this.http.get("https://api.github.com/users/" + this.user.username + '/repos'+'?' +environment.access_token );
       }
      
       UpdateUser(username:string) {
-        this.username = username;
+        this.user.username = username;
       }
       UpdateRepo(repo:string) {
-        this.repoName = repo;
+        this.user.repoName = repo;
       }
 }
