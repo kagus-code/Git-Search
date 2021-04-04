@@ -1,31 +1,48 @@
-<p>user works again</p>
-
-<form>
-  <div class="form-group">
-    <label>SEARCH BY:</label>
-    <input
-      type="text"
-      name="search"
-      [(ngModel)]="username"
-      (keyup)="findUser()"
-    />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input
+          class="rounded"
+          type="search"
+          name="search"
+          [(ngModel)]="username"
+          (keyup)="findUser()"
+          aria-label="Search"
+        />
+        <label> &nbsp; Search <i class="fas fa-search"> &nbsp;</i></label>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
   </div>
-</form>
-<div *ngIf="user" class="container">
-  <div class="card bg-light">
-    <div class="card-header">Username: {{ user.login }}</div>
+</div>
 
-    <div class="card-body">
-      <div class="row">
-        <div class="col-sm-3">
-          <img
-            [src]="user.avatar_url"
-            [title]="user.name"
-            [style.width.px]="imageWidth"
-            [style.height.px]="imageHeight"
-          />
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        class="image img-fluid"
+        [src]="user.avatar_url"
+        [title]="user.name"
+        [style.width.px]="imageWidth"
+        [style.height.px]="imageHeight"
+      />
 
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+
+  <div *ngIf="user" class="container">
+    <div class="card bg-light">
+      <div class="card-header">Username: {{ user.login }}</div>
+
+      <div class="card-body">
         <div class="col-sm-9">
           <ul class="list-group">
             <li class="list-group-item">
