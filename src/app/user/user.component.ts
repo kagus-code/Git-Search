@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
   user: any;
   userRepos:any;
   username: string = 'kagus-code'
-  imageWidth: number = 150;
+  imageWidth: number = 200;
   imageHeight: number = 200;
   constructor(private userService: UserRequestService) { }
 
@@ -20,7 +20,6 @@ export class UserComponent implements OnInit {
     this.userService.UpdateUser(this.username);
 
     this.userService.userRequest().subscribe(user => {
-      console.log(user);
       this.user = user;
     });
 
