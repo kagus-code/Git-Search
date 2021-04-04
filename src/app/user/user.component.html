@@ -16,13 +16,12 @@
           (keyup)="findUser()"
           aria-label="Search"
         />
-        <label> &nbsp; Search <i class="fas fa-search"> &nbsp;</i></label>
+        <label> &nbsp;<i class="fas fa-search"> &nbsp;</i></label>
       </div>
     </div>
     <div class="col-md-4"></div>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -30,42 +29,33 @@
         class="image img-fluid"
         [src]="user.avatar_url"
         [title]="user.name"
-        [style.width.px]="imageWidth"
-        [style.height.px]="imageHeight"
       />
-
-      <div class="col-md-6"></div>
     </div>
-  </div>
+    <br />
+    <div class="col-md-6">
+      <div class="card" style="width: 30rem">
+        <div class="card-header">Username: {{ user.login }}</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Username: </strong> {{ user.login }}
+          </li>
+          <li class="list-group-item">
+            <strong>Name: </strong> {{ user.name }}
+          </li>
+          <li class="list-group-item">
+            <strong>Email: </strong> {{ user.email }}
+          </li>
+          <li class="list-group-item">
+            <strong>Location: </strong> {{ user.location }}
+          </li>
+          <li class="list-group-item">
+            <strong>Joined on: </strong> {{ user.created_at | date }}
+          </li>
 
-  <div *ngIf="user" class="container">
-    <div class="card bg-light">
-      <div class="card-header">Username: {{ user.login }}</div>
-
-      <div class="card-body">
-        <div class="col-sm-9">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <strong>Username: </strong> {{ user.login }}
-            </li>
-            <li class="list-group-item">
-              <strong>Name: </strong> {{ user.name }}
-            </li>
-            <li class="list-group-item">
-              <strong>Email: </strong> {{ user.email }}
-            </li>
-            <li class="list-group-item">
-              <strong>Location: </strong> {{ user.location }}
-            </li>
-            <li class="list-group-item">
-              <strong>Joined on: </strong> {{ user.created_at | date }}
-            </li>
-
-            <li class="list-group-item">
-              <strong>Repositories: </strong> {{ user.public_repos }}
-            </li>
-          </ul>
-        </div>
+          <li class="list-group-item">
+            <strong>Repositories: </strong> {{ user.public_repos }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
