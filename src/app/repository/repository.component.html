@@ -1,30 +1,101 @@
-<p>repository works!</p>
-<div class="container-fluid bg-light">
-  <div class="container">
-    <form>
-      <div class="form-group">
-        <label>SEARCH BY:</label>
-        <input
-          type="text"
-          name="search"
-          [(ngModel)]="repoName"
-          (keyup)="findRepo()"
-        />
-      </div>
-    </form>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<nav
+  class="navigation-bar"
+  class="navbar navbar-expand-md navbar-light sticky-top"
+>
+  <div class="container-fluid" id="nav-main">
+    <a class="logo" href="#"><img src="../assets/logo.png" alt="logo" /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./">
+            <button id="button-nav">Home</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:ekagwima745@gmail.com">
+            <button id="button-nav">Contact</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br />
+<br />
+<br />
 
-    <div *ngIf="repoitems">
-      <div class="card" *ngFor="let item of repoitems">
-        <div class="card-body">
-          <a href="{{ item.html_url }}" target="_blank"
-            ><strong>{{ item.name }}</strong></a
-          >
-          <p><strong>Created:</strong> {{ item.created_at | date }}</p>
-          <p><strong>Created by:</strong> {{ item.owner.login }}</p>
-          <p><strong>Language used:</strong> {{ item.language }}</p>
-          <p>{{ item.description }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="col-xs-4">
+          <label
+            >Enter repository name here&nbsp;<i class="fas fa-search"></i
+          ></label>
+          <span></span>
+          <input
+            type="text"
+            name="search"
+            [(ngModel)]="repoName"
+            (keyup)="findRepo()"
+            placeholder="search for a repository"
+          />
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of repoitems">
+      <div class="card repo-card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-header">
+          <h2>Repos</h2>
+        </div>
+        <div class="card-body">
+          <div class="card-body">
+            <span>
+              <a href="{{ item.html_url }}" target="_blank"
+                ><strong>{{ item.name }}</strong></a
+              ></span
+            >
+            <hr />
+            <p>
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Created on:
+              {{ item.created_at | date }}
+            </p>
+            <hr />
+            <p>
+              <i class="fa fa-code" aria-hidden="true"></i>&nbsp;Language Used:
+              {{ item.language }}
+            </p>
+            <hr />
+            <p>
+              <i class="fa fa-comment" aria-hidden="true"></i>
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+        <div class="card-footer mdb-color text-center">
+          <i class="fa fa-user" aria-hidden="true"></i> &nbsp;
+          <p>Created by :{{ item.owner.login }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
   </div>
 </div>

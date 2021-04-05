@@ -79,11 +79,20 @@
           <div class="card-body">
             <h3>{{ repo.name }}</h3>
             <hr />
-            <p>Created: {{ repo.created_at | date }}</p>
+            <p>
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Created on:
+              {{ repo.created_at | date }}
+            </p>
             <hr />
-            <p>Language Used: {{ repo.language }}</p>
+            <p>
+              <i class="fa fa-code" aria-hidden="true"></i>&nbsp;Language Used:
+              {{ repo.language }}
+            </p>
             <hr />
-            <p>{{ repo.description }}</p>
+            <p>
+              <i class="fa fa-comment" aria-hidden="true"></i>
+              {{ repo.description }}
+            </p>
           </div>
         </div>
         <div class="card-footer mdb-color text-center">

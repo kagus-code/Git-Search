@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api.github.com/users/kagus-code?',
-  access_token: 'access_token=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',
+  access_token: 'access_token=be05ad82ef1dec303061648a172836e81613bc78',
   
 };
 
