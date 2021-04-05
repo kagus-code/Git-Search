@@ -8,6 +8,7 @@ import { LandingComponent } from './landing-page/landing/landing.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { TimePassedPipe } from './pipes/time-passed.pipe';
+import { AppshadowDirective } from './appshadow.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TimePassedPipe } from './pipes/time-passed.pipe';
     LandingComponent,
     UserComponent,
     RepositoryComponent,
-    TimePassedPipe
+    TimePassedPipe,
+    AppshadowDirective
   ],
   imports: [
     BrowserModule,

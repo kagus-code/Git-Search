@@ -61,7 +61,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let item of repoitems">
-      <div class="card repo-card shadow p-3 mb-5 bg-white rounded">
+      <div
+        [appAppshadow]="'hotpink'"
+        [appAppshadowX]="'12px'"
+        [appAppshadowY]="'6px'"
+        [appAppshadowBlur]="'30px'"
+        class="card repo-card shadow p-3 mb-5 bg-white rounded"
+      >
         <div class="card-header">
           <h2>Repos</h2>
         </div>

@@ -72,7 +72,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let repo of userRepos">
-      <div class="card repo-card">
+      <div
+        [appAppshadow]="'hotpink'"
+        [appAppshadowX]="'12px'"
+        [appAppshadowY]="'6px'"
+        [appAppshadowBlur]="'30px'"
+        class="card repo-card"
+      >
         <div class="card-header">
           <h2>Repos</h2>
         </div>
