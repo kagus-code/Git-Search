@@ -55,7 +55,8 @@
           </li>
           <li class="list-group-item">
             <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
-            <strong>Joined on: </strong> {{ user.created_at | date }}
+            <strong> Joined </strong> {{ user.created_at | timePassed }} &nbsp;
+            &nbsp; on : {{ user.created_at | date }}
           </li>
 
           <li class="list-group-item">
@@ -80,8 +81,9 @@
             <h3>{{ repo.name }}</h3>
             <hr />
             <p>
-              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Created on:
-              {{ repo.created_at | date }}
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Created :
+              {{ repo.created_at | timePassed }} <br />
+              On : {{ repo.created_at | date }}
             </p>
             <hr />
             <p>

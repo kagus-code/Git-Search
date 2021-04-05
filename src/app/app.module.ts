@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing-page/landing/landing.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { TimePassedPipe } from './pipes/time-passed.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     UserComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    TimePassedPipe
   ],
   imports: [
     BrowserModule,
