@@ -2,12 +2,9 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 />
-<nav
-  class="navigation-bar"
-  class="navbar navbar-expand-md navbar-light sticky-top"
->
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
   <div class="container-fluid" id="nav-main">
-    <a class="logo" href="#"><img src="../assets/logo.png" alt="logo" /></a>
+    <a class="logo" href="./"><img src="../assets/logo.png" alt="logo" /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -39,25 +36,24 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="form-group">
-        <div class="col-xs-4">
-          <label
-            >Enter repository name here&nbsp;<i class="fas fa-search"></i
-          ></label>
-          <span></span>
-          <input
-            type="text"
-            name="search"
-            [(ngModel)]="repoName"
-            (keyup)="findRepo()"
-            placeholder="search for a repository"
-          />
-        </div>
+      <div>
+        <label
+          >Enter repository name here&nbsp;<i class="fas fa-search"></i
+        ></label>
+        <br />
+        <input
+          class="form-control"
+          type="text"
+          name="search"
+          [(ngModel)]="repoName"
+          (keyup)="findRepo()"
+          placeholder="search for a repository"
+        />
       </div>
     </div>
   </div>
 </div>
-
+<br /><br />
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let item of repoitems">
