@@ -7,19 +7,18 @@ import{ User } from '../user-class/user'
 })
 export class UserRequestService {
  user: User
- access_token: string ='access_token=be05ad82ef1dec303061648a172836e81613bc78'
   constructor(private http:HttpClient) { 
     this.user= new User("","");
   }
   userRequest(){
 
-    return this.http.get("https://api.github.com/users/" + this.user.username +'?'+environment.access_token,({
+    return this.http.get("https://api.github.com/users/" + this.user.username +'?',({
       headers: new HttpHeaders({Authorization: 'token'+ environment.access_token})
     }))
     }
 
     userRepoRequest(){
-      return this.http.get("https://api.github.com/users/" + this.user.username + '/repos'+'?' + environment.access_token, ({
+      return this.http.get("https://api.github.com/users/" + this.user.username + '/repos'+'?' , ({
         headers: new HttpHeaders({Authorization: 'token'+ environment.access_token})
       }))
       }
