@@ -61,7 +61,15 @@
 
           <li class="list-group-item">
             <i class="fa fa-code" aria-hidden="true"></i>&nbsp;
-            <strong>Repositories: </strong> {{ user.public_repos }}
+            <strong>Repositories: </strong>
+            {{ user.public_repos }}&nbsp;&nbsp;&nbsp;
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              (click)="getRepos()"
+            >
+              View {{ user.login }} Repositories
+            </button>
           </li>
         </ul>
       </div>

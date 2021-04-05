@@ -23,6 +23,9 @@ export class UserComponent implements OnInit {
       this.user = user;
     });
 
+    
+  }
+  getRepos(){
     this.userService.userRepoRequest().subscribe(repos => {
       console.log(repos);
       this.userRepos = repos;
