@@ -1,5 +1,10 @@
 .image {
-  border-radius: 500px;
   width: 300px;
   height: 300px;
+}
+.user-card {
+  width: 30rem;
+}
+.repo-card {
+  height: 30rem;
 }
