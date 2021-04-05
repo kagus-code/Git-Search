@@ -8,7 +8,7 @@
 }
 .curved.upper {
   color: white;
-  background-image: url("/assets/background.jpg");
+  background-image: url(/assets/background.jpg);
 }
 #top-section {
   padding-top: 5rem;

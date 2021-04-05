@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api.github.com/users/kagus-code?',
-  access_token: 'access_token=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',
+  access_token: 'access_token=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',
   
 };
 
 //ACCESSTOKEN :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
-//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
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
