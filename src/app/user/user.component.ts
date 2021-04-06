@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {UserRequestService} from '../user-http/user-request.service'
 
 @Component({
@@ -10,9 +9,7 @@ import {UserRequestService} from '../user-http/user-request.service'
 export class UserComponent implements OnInit {
   user: any;
   userRepos:any;
-  username: string = 'kagus-code'
-  imageWidth: number = 200;
-  imageHeight: number = 200;
+  username: string = 'kagus-code';
   constructor(private userService: UserRequestService) { }
 
 
