@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
 
   constructor() { }
-
+  currentYear: number = new Date().getFullYear();
   ngOnInit(): void {
   }
 

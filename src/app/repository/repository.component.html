@@ -46,7 +46,7 @@
           type="text"
           name="search"
           [(ngModel)]="repoName"
-          (keyup)="findRepo()"
+          (keyup.enter)="findRepo()"
           placeholder="search for a repository"
         />
       </div>
