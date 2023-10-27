@@ -22,6 +22,17 @@ export class UserComponent implements OnInit {
 
     
   }
+
+  debounceFindUser() {
+    setTimeout(() => {
+      if (this.username.length >= 5) {
+        this.findUser();
+      }
+    }, 500);
+
+  }
+
+  
   getRepos(){
     this.userService.userRepoRequest().subscribe(repos => {
       console.log(repos);
